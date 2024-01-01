@@ -1,0 +1,47 @@
+.share {
+    padding: 10px;
+}
+
+.icons button {
+    margin: 5px;
+}
+
+.SocialIcons {
+    /* display: ; */
+    position: fixed;
+    bottom: 50px;
+    right: 2%;
+    z-index: 999;
+}
+
+.SocialIcons ul {
+    list-style: none;
+    padding: 0;
+}
+
+.SocialIcons ul div {
+    padding: 10px;
+    display: block;
+    border-radius: 50%;
+    margin-bottom: 10px;
+
+}
+
+.SocialIcons ul div svg {
+    /* font-size: 25px; */
+    font-size: clamp(21px, 4vw, 25px);
+
+    color: white;
+}
+
+.SocialIcons ul li:nth-of-type(3) div {
+    background-color: #2BB741;
+}
+
+.SocialIcons ul li:nth-of-type(2) div {
+    background-color: #0084FF;
+}
+
+.SocialIcons ul li:nth-of-type(1) div {
+    background-color: #00599B;
+}

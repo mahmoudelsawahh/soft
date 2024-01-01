@@ -1,0 +1,15 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://deltawy.com/
+
+# Sitemaps
+Sitemap: https://deltawy.com/sitemap.xml
+Sitemap: https://deltawy.com/apps.index.xml
+Sitemap: https://deltawy.com/projects.index.xml
+Sitemap: https://deltawy.com/videos.index.xml
+Sitemap: https://deltawy.com/articles.index.xml
+Sitemap: https://deltawy.com/website.index.xml
+Sitemap: https://deltawy.com/services.index.xml

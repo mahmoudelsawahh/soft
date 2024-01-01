@@ -1,0 +1,36 @@
+{
+  "name": "deltawycom",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "NODE_ENV=production node app.js",
+    "postbuild": "next-sitemap --config next-sitemap.config.js "
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.1",
+    "axios": "^1.2.1",
+    "bootstrap": "^5.2.3",
+    "html-react-parser": "^5.0.7",
+    "isomorphic-unfetch": "^4.0.2",
+    "moment": "^2.29.4",
+    "next": "13.0.6",
+    "next-sitemap": "^3.1.45",
+    "primereact": "^8.7.3",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.7.0",
+    "react-bootstrap-pagination-control": "^1.0.5",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
+    "react-loader-spinner": "^6.1.0",
+    "react-loading-skeleton": "^3.1.0",
+    "react-redux": "^8.0.5",
+    "react-share": "^4.4.1",
+    "react-slick": "^0.29.0",
+    "react-toastify": "^9.1.1",
+    "sharp": "^0.31.3",
+    "slick-carousel": "^1.8.1",
+    "user-agents": "^1.0.1283"
+  }
+}

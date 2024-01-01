@@ -1,0 +1,144 @@
+.image_container {
+    position: relative;
+    width:200px;
+   height:200px;
+    /* max-width: 500px; */
+    /* max-height: auto; */
+    margin: 20px auto 40px;
+
+    /* overflow: hidden; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+/* .image_container img {
+    width: 100%;
+    height: auto;
+} */
+/* .shad {
+    box-shadow: var(--box_shadow);
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    margin: 20px auto 40px;
+    border-radius: 15px;
+
+} */
+.services h1 {
+    margin-bottom: 35px;
+}
+.content h2,
+.content h3 {
+    color: var(--main_color);
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.content p {
+    font-size: 18px;
+}
+.content img {
+    width: 500px;
+    height: auto;
+    display: block;
+
+}
+@media (max-width: 767.98px) {
+    .content img {
+        width: 300px;
+    
+    }
+}
+
+
+
+.latest {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    min-height: 500px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    position: -webkit-sticky; /* Safari */
+    /* width: 80%; */
+}
+
+.artical {
+    margin: 10px 0;
+    display: flex;
+    /* justify-content: ; */
+    align-items: center;
+    cursor: pointer;
+}
+.artical a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.artical:not(:last-of-type) {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+
+
+}
+
+.Art_image_container {
+    margin-left: 20px;
+    /* box-shadow: var( --box_shadow); */
+
+}
+
+.Web_image_container {
+    /* margin: 0 auto; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Web_image_container img {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px 2px rgb(0 0 0 / 10%);
+    margin-bottom: 20px;
+    box-shadow: var(--box_shadow);
+
+}
+
+.services {
+    padding: 50px 0;
+}
+
+.description {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.description a {
+    padding: 10px 15px;
+    text-decoration: none;
+    /* align-items: center; */
+    color: white !important;
+    background-color: var(--main_color);
+    border-radius: 10px;
+    margin: 20px auto;
+    display: block;
+    width: 200px;
+    /* cursor: pointer; */
+}
+.links {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;
+}
+/* .description */
+.share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

@@ -1,0 +1,230 @@
+.Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
+  box-shadow: 0 5px 15px 2px rgb(0 0 0 / 10%);
+  cursor: pointer;
+  /* padding: 5px ; */
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+
+  /* min-height: 300px; */
+}
+
+.CardImageContainer {
+  width: 90%;
+  overflow: hidden;
+}
+
+/* .CardImageContainer img {
+  width: 100%;
+} */
+
+.imageCOntainer {
+  width: 98%;
+  /* height: 300px;
+  max-height: 300px; */
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.imageCOntainer::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.048);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index:2;
+}
+.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 3;
+  /* color: white; */
+  color: red;
+}
+.play svg {
+
+  font-size: clamp(25px, 4vw, 50px);
+}
+.link {
+  color: black;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-size: clamp(18px, 4vw, 22px);
+  padding: 5px;
+}
+.link_detail {
+  width: 90%;
+  /* border: 1px solid var(--main_color); */
+  background-color: transparent;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--main_color);
+  text-align: center;
+  font-weight: bold;
+  font-size: clamp(18px, 4vw, 22px);
+  border-radius: 10px;
+  margin: 10px 0;
+
+  transition: 0.3s;
+}
+
+.link_detail:hover {
+  color: var(--main_color);
+  /* background-color: white;
+  border: 1px solid var(--main_color); */
+}
+
+/* .card_p {
+  font-size: clamp(18px, 4vw, 22px);
+  color: var(--main_color);
+  font-weight: bold;
+  margin: 10px 0;
+} */
+
+/* start articales */
+.articales {
+  padding: 50px 0;
+}
+
+.articalCard {
+  width: 95%;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0 5px 15px 2px rgb(0 0 0 / 10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0;
+  min-height: 350px;
+}
+
+.image_card {
+  width: 90%;
+  width: 350px;
+  position: relative;
+}
+
+/* .image_card img {
+  width: 100%;
+} */
+
+.date {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px 0 0 0;
+  /* box-shadow: 0 5px 15px 2px rgb(0 0 0 / 10%); */
+  font-size: 20px;
+}
+
+.date svg {
+  margin-left: 10px;
+  color: var(--main_color);
+}
+
+.content {
+  padding: 10px;
+}
+
+.content a{
+  font-size: clamp(18px, 4vw, 20px);
+  font-weight: bold;
+  margin: 10px;
+  text-align: right;
+  display: block;
+  text-decoration: none;
+  color: black;
+  text-align: right;
+
+}
+
+.content p {
+  text-align: right;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
+.social {
+  text-align: right;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+
+.social span {
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+  display: block;
+}
+
+.social span svg {
+  color: var(--main_color);
+  font-size: 22px;
+}
+
+
+.frameCard {
+  width: 98%;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  /* margin-bottom: 20px; */
+  cursor: pointer;
+  /* position: relative; */
+}
+
+
+.frameCard p {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.TeamImage {
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TeamImage img {
+  width: auto;
+  margin: 0 auto;
+  height: auto;
+}
+
+.Team_Name {
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+.teamJob {
+  font-size: 22px;
+}

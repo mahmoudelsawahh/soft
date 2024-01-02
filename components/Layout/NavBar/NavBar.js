@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { AiFillInstagram, AiOutlineMenu } from "react-icons/ai";
 // AiOutlineMenu
 import { IoIosArrowDown, IoIosArrowBack } from "react-icons/io";
-
+import logo from '/public/images/logo.webp'
 import { BsWhatsapp } from "react-icons/bs";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { FaFacebookF, FaLinkedinIn, FaTwitter, FaBehance, FaYoutube } from "react-icons/fa";
@@ -37,7 +37,7 @@ const NavBar = () => {
          </Offcanvas.Title> */}
             <div className={`${styles.image_container} text-center ImageOff`}>
               <Image
-                src={"/logo.webp"}
+                src={logo}
                 layout={"fill"}
                 objectFit={"contain"}
                 alt={"logo"}
@@ -159,7 +159,7 @@ const NavBar = () => {
               onClick={() => router.push("/")}
             >
               <Image
-                src={"/logo.webp"}
+                src={logo}
                 layout={"fill"}
                 objectFit={"contain"}
                 alt={"logo"}

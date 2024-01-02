@@ -61,7 +61,7 @@ const Article = () => {
         <div
           key={idx}
           className={styles.artical}
-          onClick={() => router.push(`/article/${ele.id}/${PathName}`)}
+          onClick={() => router.push(`/article/${ele.post}/${PathName}`)}
         >
           <div className={styles.Art_image_container}>
             <Image
@@ -71,15 +71,21 @@ const Article = () => {
               height={50}
             />
           </div>
-          <Link title={ele.title.rendered} href={`/article/${ele.id}/${PathName}`}> {ele.title.rendered}</Link>
+          <Link title={ele.title.rendered} href={`/article/${ele.post}/${PathName}`}> {ele.title.rendered}</Link>
         </div>
       );
     });
 
   return (
     <>
+          <Head>
+             <title>{Artical ? Artical.title.rendered : "اخر المقالات"}</title>
+             <meta name="description" content={Artical ? Artical.content.rendered : ""}/>
+          </Head>
     {Artical ? 
-      <div className={styles.services}>
+      <>
+           
+          <div className={styles.services}>
         <Container>
           <h1 className="mainHeading"> {Artical.title.rendered}</h1>
           <Row>
@@ -115,6 +121,7 @@ const Article = () => {
           </Row>
         </Container>
       </div>
+      </>
     : 
     
          <div style={{height : '90vh', display : 'flex', justifyContent : 'center', alignItems : 'center'}}>

@@ -23,14 +23,20 @@ const [data , setData] = useState(null)
 const pageSize = 10;
 let [currentPage , setCurrentPage] = useState(1)
 let [totlaPage , setTotlaPage] = useState(1)
+const [loading , setLoading] = useState(false)
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+};
 
  useEffect(()=>{
-  async function fetchData() {
-    
+  async function fetchData() {    
   try {
+    setLoading(true)
     const postsResponse = await axios.get(`https://deltawy-soft.com/wp-json/wp/v2/posts?page=${currentPage}&per_page=${pageSize}`);
     const posts = postsResponse.data;
     const totalPages = postsResponse.headers['x-wp-totalpages'];
+    setLoading(false)
    if(totalPages == 1){
     setTotlaPage(totalPages)
    }
@@ -38,9 +44,10 @@ let [totlaPage , setTotlaPage] = useState(1)
       const featuredMediaId = post.featured_media;
       
       if (featuredMediaId) {
+        setLoading(true)
         const mediaResponse = await axios.get(`https://deltawy-soft.com/wp-json/wp/v2/media/${featuredMediaId}`);
         const media = mediaResponse.data;
-        
+        setLoading(false)
         return {
                     id : post.id,
                     imageLink : media.source_url,
@@ -145,21 +152,35 @@ const router = useRouter();
       );
     }) : 
     
-    <div style={{height : '90vh', display : 'flex', justifyContent : 'center', alignItems : 'center'}}>
-    <RotatingLines
-   strokeColor="grey"
-   strokeWidth="5"
-   animationDuration="0.75"
-   width="96"
-   visible={true}
- />
-    </div>
-   
+//     <div style={{height : '90vh', display : 'flex', justifyContent : 'center', alignItems : 'center'}}>
+//     <RotatingLines
+//    strokeColor="grey"
+//    strokeWidth="5"
+//    animationDuration="0.75"
+//    width="96"
+//    visible={true}
+//  />
+//     </div>
+null
   return (
-    <div className={styles.Articles}>
+   <>
+      <Head>
+        <title>اخر المقالات</title>
+      </Head>
+      <div className={styles.Articles}>
       <h1 className="mainHeading">اخر المقالات</h1>
       <Container>
-        <Row>{articales}</Row>
+        <Row>{loading ? 
+          <div style={{height : '90vh', display : 'flex', justifyContent : 'center', alignItems : 'center'}}>
+           <RotatingLines
+          strokeColor="grey"
+          strokeWidth="5"
+          animationDuration="0.75"
+          width="96"
+          visible={true}
+        />
+           </div>
+        : articales}</Row>
         <PaginationControl
     page={totlaPage}
     between={5}
@@ -168,11 +189,13 @@ const router = useRouter();
     changePage={(page) => {
       setTotlaPage(page)
       setCurrentPage(page)
+      scrollToTop()
     }}
     ellipsis={1}
   />
       </Container>
     </div>
+   </>
   );
 };
 

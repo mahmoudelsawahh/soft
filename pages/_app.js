@@ -59,7 +59,7 @@ function MyApp({ Component, pageProps, canonical }) {
     };
   }, []);
   return (
-    <>
+    <htm lang="ar">
       <Head>
         {/* <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta charSet="utf-8" /> */}
@@ -191,7 +191,7 @@ function MyApp({ Component, pageProps, canonical }) {
           <SocialMedia />
         </Provider>
       )}
-    </>
+    </htm>
   );
 }
 

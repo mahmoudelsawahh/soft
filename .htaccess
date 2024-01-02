@@ -1,7 +1,0 @@
- # Enable Compression
-DirectoryIndex disabled
-RewriteEngine On
-RewriteRule ^$ http://deltawy.com:3009/ [P,L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ http://deltawy.com:3009/$1 [P,L]

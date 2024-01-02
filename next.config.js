@@ -64,6 +64,7 @@ const nextConfig = {
       "www.hyperpay.com",
       "deltawy.com",
       "delta.deltawy.com",
+      "soft-lyart.vercel.app"
     ],
   },
 };
